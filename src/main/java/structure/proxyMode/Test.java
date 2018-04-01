@@ -5,7 +5,9 @@ package structure.proxyMode;
  */
 public class Test {
     public static void main(String[] args) {
-        Sourceable sourceable = new Proxy();
+//        Sourceable sourceable = new Proxy();
+//        sourceable.method();
+        Sourceable sourceable = (Sourceable) new DynamicProxy().getProxyObject(new Source());
         sourceable.method();
     }
 }
