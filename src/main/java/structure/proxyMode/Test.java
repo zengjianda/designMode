@@ -14,6 +14,7 @@ public class Test {
 //        Sourceable sourceable = (Sourceable) new DynamicProxy().getProxyObject(new Source());
 //        sourceable.method();
         //cglib代理
+        //Enhancer类是CGLib中的一个字节码增强器
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(Source.class);
         enhancer.setCallback(new CglibDynamicProxy());
